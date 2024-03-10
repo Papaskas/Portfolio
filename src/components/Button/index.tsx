@@ -1,5 +1,5 @@
 import React, { RefObject } from 'react'
-import '@src/components/Button/style.css'
+import css from '@src/components/Button/style.module.scss'
 
 interface IButton {
   children: React.JSX.Element | React.JSX.Element[] | string
@@ -12,7 +12,7 @@ interface IButton {
 }
 function Index({ children, onClick, type = 'button', variant = 'primary', disabled, name, forwardedRef }: Readonly<IButton>) {
   return (
-    <button onClick={onClick} type={type} disabled={disabled} name={name} ref={forwardedRef}>
+    <button onClick={onClick} className={css.button + ' ' + css[`button_${variant}`]} type={type} disabled={disabled} name={name} ref={forwardedRef}>
       {children}
     </button>
   )

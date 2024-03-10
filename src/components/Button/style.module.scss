@@ -36,18 +36,18 @@
   &_secondary {
     border: 1px solid $Gray;
     color: $Gray;
-    @include genPseudoBtn(#000000);
+    @include genPseudoBtn($Gray);
   }
 
   &_primary {
     border: 1px solid $Primary;
     color: $Secondary;
-    @include genPseudoBtn(#000000);
+    @include genPseudoBtn($Primary);
   }
 
   &_error {
-    border: 1px solid #000000;
-    color: #000000;
-    @include genPseudoBtn(#000000);
+    border: 1px solid $Error;
+    color: $Error;
+    @include genPseudoBtn($Error);
   }
 }
