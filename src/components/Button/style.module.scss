@@ -17,9 +17,9 @@
 
   &:disabled,
   &[disabled] {
-    border: 1px solid #000000;
-    background-color: #000000;
-    color: #000000;
+    border: 1px solid $Gray;
+    background-color: $BG;
+    color: $Gray;
 
     &::before {
       content: '';
