@@ -1,0 +1,27 @@
+@import '@sass/variables', '@sass/font.mixins';
+
+.container {
+  margin: auto;
+  max-width: 500px;
+  width: 100%;
+  transform: translateY(200px);
+}
+.pong {
+  background: #FFFFFF;
+  width: 10px;
+  height: 100px;
+}
+.leftPong {
+  float: left;
+}
+.rightPong {
+  float: right;
+}
+.ball {
+  background: #FFFFFF;
+  width: 10px;
+  height: 10px;
+  position: relative;
+  top: 45px;
+  left: 10px;
+}
