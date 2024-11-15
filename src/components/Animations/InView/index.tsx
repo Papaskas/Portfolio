@@ -4,9 +4,9 @@ import { useInView } from 'react-intersection-observer'
 type TInView = {
   children: JSX.Element | JSX.Element[] | string | string[]
   animateName: string
-  timeBeforeAnimation?: 0 | 1 | 2 | 3 | 4 | 5
+  delay?: 0 | 1 | 2 | 3 | 4 | 5
 }
-function Index({ children, animateName, timeBeforeAnimation = 0 }: Readonly<TInView>) {
+function Index({ children, animateName, delay = 0 }: Readonly<TInView>) {
   const [visibility, setVisibility] = useState<React.CSSProperties['visibility']>('hidden')
 
   const { ref, inView, entry } = useInView({
@@ -17,9 +17,9 @@ function Index({ children, animateName, timeBeforeAnimation = 0 }: Readonly<TInV
   useEffect(() => {
     if (entry && inView) {
       setVisibility('visible')
-      inView && (entry.target.className = `animate__animated ${animateName} animate__delay-${timeBeforeAnimation}s`)
+      inView && (entry.target.className = `animate__animated ${animateName} animate__delay-${delay}s`)
     }
-  }, [entry, inView, animateName, timeBeforeAnimation])
+  }, [entry, inView, animateName, delay])
 
   return (
     <div ref={ref} style={{ visibility }}>

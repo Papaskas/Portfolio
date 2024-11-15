@@ -10,7 +10,7 @@ function Index() {
     <section>
       <div className={css.background_cube} />
 
-      <InView animateName="animate__bounceInLeft" timeBeforeAnimation={1}>
+      <InView animateName="animate__bounceInLeft" delay={1}>
         <article className={css.article}>
           <h2 className={css.article__title}>{t('pages.home.article.author_say')}</h2>
           <p className={css.article__description}>- {t('pages.home.article.author')}</p>
